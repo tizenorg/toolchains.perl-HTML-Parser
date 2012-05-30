@@ -15,6 +15,7 @@ License:    GPL+ or Artistic
 URL:        http://search.cpan.org/dist/HTML-Parser/
 Source0:    http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTML-Parser-%{version}.tar.gz
 Source100:  perl-HTML-Parser.yaml
+Source1001: packaging/perl-HTML-Parser.manifest 
 Requires:   perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 Requires:   perl(HTML::Tagset) >= 3.03
 BuildRequires:  perl(HTML::Tagset) >= 3.03, perl(ExtUtils::MakeMaker), perl(Test::Simple)
@@ -36,6 +37,7 @@ chmod -c a-x eg/*
 # << setup
 
 %build
+cp %{SOURCE1001} .
 # >> build pre
 # << build pre
 
@@ -81,6 +83,7 @@ make test
 
 
 %files
+%manifest perl-HTML-Parser.manifest
 %defattr(-,root,root,-)
 # >> files
 %{perl_vendorarch}/HTML/*
