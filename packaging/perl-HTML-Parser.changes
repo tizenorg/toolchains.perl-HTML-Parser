@@ -1,3 +1,6 @@
+* Tue Jun 5 2012 Junfeng Dong <junfeng.dong@intel.com> - 3.65
+- Clean up spec file for packaging.
+
 * Tue Jul 27 2010 Quanxian Wang <quanxian.wang@intel.com>  3.65
 - update to 3.65
 
