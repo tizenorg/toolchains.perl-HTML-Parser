@@ -1,12 +1,12 @@
 Name:       perl-HTML-Parser
 Summary:    Perl module for parsing HTML
 Version:    3.65
-Release:    1
+Release:    2 
 Group:      Development/Libraries
 License:    GPL+ or Artistic
 URL:        http://search.cpan.org/dist/HTML-Parser/
 Source0:    %{name}-%{version}.tar.gz
-Source1001: packaging/perl-HTML-Parser.manifest 
+Source1001: perl-HTML-Parser.manifest 
 Requires:   perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 Requires:   perl(HTML::Tagset) >= 3.03
 BuildRequires:  perl(HTML::Tagset) >= 3.03, perl(ExtUtils::MakeMaker), perl(Test::Simple)
@@ -51,12 +51,8 @@ iconv -f iso-8859-1 -t utf-8 <"$file" > "${file}_"
 mv -f "${file}_" "$file"
 chmod -R u+w $RPM_BUILD_ROOT/*
 
-%check
-make test
-
 %files
 %manifest perl-HTML-Parser.manifest
-%defattr(-,root,root,-)
 %{perl_vendorarch}/HTML/*
 %{perl_vendorarch}/auto/HTML/*
 %doc %{_mandir}/man3/*.3pm*
