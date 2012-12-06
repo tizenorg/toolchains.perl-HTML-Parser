@@ -1,5 +1,7 @@
 package HTML::Entities;
 
+=encoding utf8
+
 =head1 NAME
 
 HTML::Entities - Encode or decode strings with HTML entities
@@ -32,9 +34,7 @@ character entities.  The module provides the following functions:
 =item decode_entities( $string, ... )
 
 This routine replaces HTML entities found in the $string with the
-corresponding Unicode character.  Under perl 5.6 and earlier only
-characters in the Latin-1 range are replaced. Unrecognized
-entities are left alone.
+corresponding Unicode character.  Unrecognized entities are left alone.
 
 If multiple strings are provided as argument they are each decoded
 separately and the same number of strings are returned.
@@ -146,7 +146,7 @@ require Exporter;
 @EXPORT = qw(encode_entities decode_entities _decode_entities);
 @EXPORT_OK = qw(%entity2char %char2entity encode_entities_numeric);
 
-$VERSION = "3.64";
+$VERSION = "3.69";
 sub Version { $VERSION; }
 
 require HTML::Parser;  # for fast XS implemented decode_entities
