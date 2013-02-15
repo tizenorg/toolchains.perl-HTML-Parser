@@ -1,0 +1,14 @@
+* Thu Jun 21 2012 Anas Nashif <anas.nashif@intel.com> f45a77c
+- set explicit dependencies on perl modules
+
+* Tue Jun 05 2012 Junfeng Dong <junfeng.dong@intel.com> f9a2647
+- Clean up spec file for packaging.
+
+* Wed May 30 2012 Ryan Ware <ryan.r.ware@intel.com> 3c3289d
+- Add default Smack manifest for perl-HTML-Parser.spec
+
+* Mon May 21 2012 Kim Kibum <kb0929.kim@samsung.com> 5bad28d
+- Upload Tizen:Base source
+[ Hyesook Choi ]
+- Initial empty repository
+
