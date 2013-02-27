@@ -65,6 +65,5 @@ make test
 %doc Changes README TODO eg/
 %{perl_vendorarch}/HTML/*
 %{perl_vendorarch}/auto/HTML/*
-%ifarch %{arm}
-%{_mandir}/man3/*.3pm*
-%endif
+%doc %{_mandir}/man3/*.3pm*
+
