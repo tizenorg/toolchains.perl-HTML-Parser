@@ -18,8 +18,7 @@ Source100:  perl-HTML-Parser.yaml
 Requires:   perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 Requires:   perl(HTML::Tagset) >= 3.03
 BuildRequires:  perl(HTML::Tagset) >= 3.03, perl(ExtUtils::MakeMaker), perl(Test::Simple)
-#!BuildIgnore:  perl-HTML-Parser-x86-arm
-#!BuildIgnore:  perl-x86-arm
+
 
 %description
 The HTML-Parser module for perl to parse and extract information from
@@ -69,17 +68,6 @@ file=$RPM_BUILD_ROOT%{_mandir}/man3/HTML::Entities.3pm
 iconv -f iso-8859-1 -t utf-8 <"$file" > "${file}_"
 mv -f "${file}_" "$file"
 chmod -R u+w $RPM_BUILD_ROOT/*
-
-# << install post
-%check
-# >> check
-make test
-# << check
-
-
-
-
-
 
 %files
 %defattr(-,root,root,-)
