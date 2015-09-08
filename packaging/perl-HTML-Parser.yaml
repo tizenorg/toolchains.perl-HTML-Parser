@@ -1,0 +1,21 @@
+Name: perl-HTML-Parser
+Summary: Perl module for parsing HTML
+Version: 3.65
+Release: 1
+Group: Development/Libraries
+License: GPL+ or Artistic
+URL: http://search.cpan.org/dist/HTML-Parser/
+Sources:
+    - http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTML-Parser-%{version}.tar.gz
+Description: |
+    The HTML-Parser module for perl to parse and extract information from
+    HTML documents, including the HTML::Entities, HTML::HeadParser,
+    HTML::LinkExtor, HTML::PullParser, and HTML::TokeParser modules.
+
+Requires:
+    - perl(HTML::Tagset) >= 3.03
+PkgBR:
+    - perl(HTML::Tagset) >= 3.03, perl(ExtUtils::MakeMaker), perl(Test::Simple)
+Configure: none
+Builder: perl
+Check: yes
